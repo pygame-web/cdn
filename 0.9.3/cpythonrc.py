@@ -679,7 +679,7 @@ ________________________
     @classmethod
     async def preload_code(cls, code, callback=None, loaderhome=".", hint=""):
         # get a relevant list of modules likely to be imported
-        PyConfig.dev_mode = 1
+
         print(f"655: preload_code({len(code)=} {hint=} {loaderhome=})")
 
         if loaderhome != ".":
@@ -691,6 +691,9 @@ ________________________
         import aio
         import aio.pep0723
         from aio.pep0723 import Config
+
+        if code.find('/// script')<0:
+            print("# 696: no pep 723 block found")
 
         if not aio.cross.simulator:
             # env path is set by pep0723
@@ -805,10 +808,7 @@ ________________________
         print("\n"*3 + f"# 805: runpy({realpath} id={cls._stage}) workdir = {cls.HOME} {len(code)=}")
 
         # TODO: get requirements only if in script mode or user code. ie not loader without pep block
-        if cls._stage>0 or code.find('/// script')>0:
-            await cls.preload_code(code, **kw)
-        else:
-            print("# 808: no pep 723 block found")
+        await cls.preload_code(code, **kw)
 
         # get an async executor to catch import errors
         if aio.toplevel.handler.instance:
