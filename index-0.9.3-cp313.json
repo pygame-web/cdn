@@ -6,6 +6,7 @@
     "harfang": "abi3/harfang-3.2.7-cp32-abi3-wasm32_bi_emscripten.whl",
     "pycparser": "pkg/pycparser-2.21-py2.py3-none-any.whl",
     "pygame": "cp313/pygame_ce-2.5.7.dev1-<abi>-<abi>-<api>.whl",
+    "pymunk": "cp313/pymunk-6.4.0-<abi>-<abi>-<api>.whl",
     "pyray": "cp313/raylib-5.5.0.4-<abi>-<abi>-<api>.whl",
     "raylib": "cp313/raylib-5.5.0.4-<abi>-<abi>-<api>.whl"
 }
