@@ -975,7 +975,7 @@ async function feat_vt(debug_hidden) {
         document.body.appendChild(stdio)
     }
 
-    const { Terminal, helper, handlevt } = await import("./vt.js")
+    const { Terminal, helper, handlevt } = await import("../vt.js")
 
     vm.vt.xterm = new Terminal("stdio", get_terminal_cols(), get_terminal_lines())
     vm.vt.xterm.set_vm_handler(vm, null, null)
