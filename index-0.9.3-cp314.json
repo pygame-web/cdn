@@ -1,5 +1,6 @@
 {
     "-CDN-": "https://pygame-web.github.io/cdn/",
+    "PIL": "cp314/pillow-11.3.0-<abi>-<abi>-<api>.whl",
     "_cffi_backend": "cp314/cffi-2.0.1.dev0-<abi>-<abi>-<api>.whl",
     "bidi": "pkg/python_bidi-0.4.2-py2.py3-none-any.whl",
     "cffi": "cp314/cffi-2.0.1.dev0-<abi>-<abi>-<api>.whl",
